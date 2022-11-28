@@ -1,9 +1,9 @@
 import { MessagesRepository } from './messages.repository';
-export class MessagesService {
-  messagesRepository: MessagesRepository
+import { Injectable } from '@nestjs/common';
 
-  constructor() {
-    this.messagesRepository = new MessagesRepository()
+@Injectable()
+export class MessagesService {
+  constructor(private messagesRepository: MessagesRepository) {
   }
 
   findOne(id: string) {

@@ -1,5 +1,7 @@
 import {writeFile, readFile} from 'fs/promises';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class MessagesRepository {
   constructor() {
     
