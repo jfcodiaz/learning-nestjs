@@ -6,3 +6,40 @@ Content-Type: application/json
   "email": "user@email.com",
   "password": "password"
 }
+
+###Find user by id
+GET http://localhost:3000/auth/1
+
+### Find users by email
+GET http://localhost:3000/auth/?email=user@email.com
+
+### Delete uer by id
+
+DELETE  http://localhost:3000/auth/4
+
+
+### Delete uer by id
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+  "email": "usename@server.com",
+  "password": "newPassword"
+}
+
+
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+  "email": "user@email.com",
+  "password": "password"
+}
+
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+  "email": "user@email.com",
+  "password": "password"
+}
