@@ -3,12 +3,28 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "user@email.com",
+  "email": "user4@email.com",
   "password": "password"
 }
 
+### Login
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "user2@email.com",
+  "password": "password"
+}
+
+### WhoAmI
+GET http://localhost:3000/auth/whoami
+
+## signout
+POST http://localhost:3000/auth/signout
+#19b064e0019966c5.88bab615e77fe55a21fa92596d3b6c8cf2527c9d58cb5eb7ee8c62452740753b
+
 ###Find user by id
-GET http://localhost:3000/auth/1
+GET http://localhost:3000/auth/2
 
 ### Find users by email
 GET http://localhost:3000/auth/?email=user@email.com
@@ -17,8 +33,7 @@ GET http://localhost:3000/auth/?email=user@email.com
 
 DELETE  http://localhost:3000/auth/4
 
-
-### Delete uer by id
+### Update uer by id
 PATCH http://localhost:3000/auth/2
 Content-Type: application/json
 
@@ -27,19 +42,18 @@ Content-Type: application/json
   "password": "newPassword"
 }
 
-
+### Update uer by id
 PATCH http://localhost:3000/auth/2
 Content-Type: application/json
 
 {
-  "email": "user@email.com",
-  "password": "password"
+  "email": "user@email.com"
 }
 
+### Update uer by id
 PATCH http://localhost:3000/auth/2
 Content-Type: application/json
 
 {
-  "email": "user@email.com",
   "password": "password"
 }
